@@ -16,11 +16,11 @@ def number_needed(string_a, string_b):
                 a[i] = FLAG
                 b[j] = FLAG
                 #FOR TESTING PURPOSES
-                print("".join(a) + "   " + "".join(b))
+                #print("".join(a) + "   " + "".join(b))
                 break
 
     counter = [character for character in a + b if character != FLAG]
-    print("".join(counter))
+    #print("".join(counter))
     return str(len(counter))
 
 # FOR HACKER RANK EXTERNAL INPUT
