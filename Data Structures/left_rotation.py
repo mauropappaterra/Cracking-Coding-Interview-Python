@@ -1,10 +1,10 @@
 # Cracking the Coding Interview
-# arrays.py
+# left_rotation.py
 # Created by Mauro J. Pappaterra on 11 of March 2018.
 
 def array_left_rotation(array, size, shifts):
-    print(array)
-    shifts = shifts % size # wraps around
+    #print(array)
+    shifts = shifts % size # wraps around after size is exceeded
 
     new_array = [None] * size
 
@@ -12,7 +12,7 @@ def array_left_rotation(array, size, shifts):
         new_index = (index - shifts) + (size + 1) % (size + 1)
         new_array[new_index] = element
 
-    print (new_array)
+    #print (new_array)
     string = ''
 
     for number in new_array:
@@ -20,7 +20,7 @@ def array_left_rotation(array, size, shifts):
 
     return string
 
-# GET EXTERNAL INPUT
+# FOR HACKER RANK EXTERNAL INPUT
 #n, k = map(int, input().strip().split(' '))
 #a = list(map(int, input().strip().split(' ')))
 #answer = array_left_rotation(a, n, k);
@@ -30,3 +30,4 @@ def array_left_rotation(array, size, shifts):
 print(array_left_rotation([1, 2, 3, 4, 5],5,4))
 print(array_left_rotation([1, 2, 3, 4, 5],5,12))
 print(array_left_rotation([1, 2, 3, 4, 5],5,-2))
+print(array_left_rotation([1, 2, 3, 4, 5, 6, 7, 8, 9],9,4))
